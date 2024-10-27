@@ -1,0 +1,23 @@
+# Diretório do ambiente virtual
+venv/
+
+# Arquivos de banco de dados
+*.sqlite3
+
+# Arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configurações específicas de IDEs e editores
+.vscode/
+.idea/
+
+# Arquivos de log
+*.log
+
+# Arquivos e pastas temporários
+*.tmp
+*.swp
+*~
+.DS_Store

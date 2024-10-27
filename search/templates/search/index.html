@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebEye - OSINT Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bg-dark text-white">
+
+<div class="container text-center my-5">
+    <h1 class="mb-4">WebEye</h1>
+    <p class="mb-5">Choose a tool below to start your OSINT search</p>
+
+    <div class="row mb-4">
+        <!-- Sherlock Box -->
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="tool-box">
+                <h3>Sherlock</h3>
+                <p>Find usernames across multiple platforms</p>
+                <input type="text" id="sherlock-username" class="form-control" placeholder="Enter username">
+                <button class="btn btn-primary mt-2" onclick="startSherlockSearch()">Search</button>
+            </div>
+        </div>
+
+        <!-- Ignorant Box -->
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="tool-box">
+                <h3>Ignorant</h3>
+                <p>Gather open-source intelligence</p>
+                <input type="text" id="ignorant-search-term" class="form-control" placeholder="Enter search term">
+                <button class="btn btn-primary mt-2" onclick="startIgnorantSearch()">Search</button>
+            </div>
+        </div>
+
+        <!-- Holehe Box -->
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="tool-box">
+                <h3>Holehe</h3>
+                <p>Check emails across multiple services</p>
+                <input type="text" id="holehe-email" class="form-control" placeholder="Enter email">
+                <button class="btn btn-primary mt-2" onclick="startHoleheSearch()">Search</button>
+            </div>
+        </div>
+
+        <!-- GHunt Box -->
+        <div class="col-lg-3 col-md-6 mb-3">
+            <div class="tool-box">
+                <h3>GHunt</h3>
+                <p>Retrieve information linked to Google</p>
+                <input type="text" id="ghunt-google-account" class="form-control" placeholder="Enter Google account">
+                <button class="btn btn-primary mt-2" onclick="startGHuntSearch()">Search</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Modal -->
+<div id="popup" class="popup d-flex" style="display: none;">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading, please wait...</p>
+        </div>
+        <div id="result" class="result" style="display: none;">
+            <p id="result-content"></p>
+            <button onclick="copyToClipboard()">Copy to clipboard</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/common.js' %}"></script>
+<script src="{% static 'js/sherlock.js' %}"></script>
+<script src="{% static 'js/ignorant.js' %}"></script>
+<script src="{% static 'js/holehe.js' %}"></script>
+<script src="{% static 'js/ghunt.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/WebEye/
+├── WebEye/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── db.sqlite3
+├── manage.py
+├── search/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations/
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── templates/
+│   │   └── search/
+│   │       └── index.html
+└── venv/
